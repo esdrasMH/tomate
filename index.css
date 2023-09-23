@@ -1,0 +1,178 @@
+body {
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+.leftBackgroundColor,
+.rightBackgroundColor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(50% - 44px);
+    height: calc(100% - 88px);
+    position: absolute;
+    color: white
+}
+
+.leftBackgroundColor {
+    padding: 44px 0 44px 44px;
+    left: 0;
+    background-color: #fa404d;
+}
+
+.leftBackgroundColor h1,
+.leftBackgroundColor p {
+    font-size: 44px;
+    margin-bottom: 4px;
+}
+
+.leftBackgroundColor span {
+    display: block;
+    font-size: 18.5px;
+}
+
+.leftBackgroundColor a {
+    text-decoration: none;
+    color: white;
+}
+
+.rightBackgroundColor {
+    padding: 44px 44px 44px 0;
+    right: 0;
+    background-color: white;
+    text-align: right;
+}
+
+.rightBackgroundColor p {
+    color: #b3abab;
+}
+
+.rightBackgroundColor span {
+    color: black;
+}
+
+.signUpForm {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 488px;
+    width: 368px;
+    position: absolute;
+    top: calc(50% - 44px);
+    left: calc(50% - 44px);
+    transform: translate(calc(-50% + 44px), calc(-50% + 44px));
+    padding: 32px;
+    background-color: white;
+    border-radius: 24px;
+    z-index: 3;
+}
+
+.signUpForm::before {
+    content: '';
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    -webkit-box-shadow: 10px 5px 10px 0px rgba(220, 220, 220, 1);
+    -moz-box-shadow: 10px 5px 10px 0px rgba(220, 220, 220, 1);
+    box-shadow: 10px 5px 10px 0px rgba(220, 220, 220, 1);
+    z-index: -1;
+}
+
+.signUpForm h2 {
+    color: #b3abab;
+    margin-bottom: 44px;
+}
+
+.signUpForm h2::before {
+    content: '';
+    height: 2px;
+    width: 32px;
+    position: absolute;
+    left: calc(50% - 44px);
+    transform: translate(calc(-50% + 44px), 40px);
+    border-bottom: 2px solid #fa404d;
+}
+
+.signUpForm .textField {
+    position: relative;
+}
+
+.signUpForm .textField input {
+    width: 100%;
+    appearance: none;
+    border: none;
+    outline: none;
+    height: 54px;
+    font-size: 16px;
+    border-bottom: 2px solid #dcdbdb;
+    margin-bottom: 32px;
+}
+
+.signUpForm .textField input:hover,
+.signUpForm .textField input:focus {
+    border-bottom: 2px solid #b3abab;
+}
+
+.signUpForm .textField input:hover {
+    background-color: #f8f7f7;
+}
+
+.signUpForm .textField input:focus {
+    background-color: #facfd2;
+}
+
+.signUpForm .textField input::placeholder {
+    color: #b3abab;
+}
+
+.signUpForm .textField i {
+    position: absolute;
+    top: 27px;
+    right: 0;
+    transform: translateY(-50%);
+    color: #b3abab;
+}
+
+.signUpForm button {
+    height: 54px;
+    border: none;
+    font-size: 16px;
+    background-color: #fa404d;
+    margin: 32px 0;
+    color: white;
+    border-radius: 24px;
+    cursor: pointer;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(250, 207, 210, 1);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(250, 207, 210, 1);
+    box-shadow: 5px 5px 5px 0px rgba(250, 207, 210, 1);
+}
+
+.signUpForm button:hover {
+    background-color: #ff4f5b;
+}
+
+.signUpForm button:active {
+    background-color: #f77c83;
+}
+
+.signUpForm p {
+    color: #b3abab;
+}
+
+.signUpForm p a {
+    text-decoration: none;
+    color: #fa404d;
+    font-weight: bold;
+}
