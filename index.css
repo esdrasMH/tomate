@@ -72,7 +72,6 @@ p {
     padding: 32px;
     background-color: white;
     border-radius: 24px;
-    z-index: 3;
 }
 
 .signUpForm::before {
@@ -106,12 +105,14 @@ p {
 }
 
 .signUpForm .textField {
+    width: 100%;
+    max-width: 320px;
     position: relative;
 }
 
 .signUpForm .textField input {
-    width: 100%;
     appearance: none;
+    width: 100%;
     border: none;
     outline: none;
     height: 54px;
@@ -175,4 +176,161 @@ p {
     text-decoration: none;
     color: #fa404d;
     font-weight: bold;
+}
+
+.navbar {
+    display: none;
+}
+
+.text {
+    display: none;
+}
+
+.footer {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .leftBackgroundColor,
+    .rightBackgroundColor {
+        width: calc(50% - 24px);
+        height: calc(100% - 48px);
+    }
+
+    .leftBackgroundColor {
+        padding: 24px 0 24px 24px;
+    }
+
+    .leftBackgroundColor h1,
+    .leftBackgroundColor p {
+        max-width: 270px;
+        font-size: 32px;
+    }
+
+    .leftBackgroundColor span {
+        font-size: 16px;
+    }
+
+    .rightBackgroundColor {
+        padding: 24px 24px 24px 0;
+    }
+
+    .signUpForm {
+        padding: 20px;
+
+    }
+}
+
+@media screen and (max-width: 990px) {
+
+    .leftBackgroundColor,
+    .rightBackgroundColor {
+        display: none;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        height: 54px;
+        width: calc(100% - 32px);
+        padding: 4px 16px;
+        background-color: #fa404d;
+        color: white;
+        -webkit-box-shadow: 0 5px 5px 0px rgba(250, 207, 210, 1);
+        -moz-box-shadow: 0 5px 5px 0px rgba(250, 207, 210, 1);
+        box-shadow: 0 5px 5px 0px rgba(250, 207, 210, 1);
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .navbar p {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .navbar .iconMenu {
+        text-align: right;
+    }
+
+    .text {
+        display: block;
+        color: #b3abab;
+        margin: 20% auto 24px;
+        padding: 12px 24px;
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 24px;
+        margin-bottom: 4px;
+    }
+
+    .text h1::before {
+        content: '';
+        height: 2px;
+        width: 80%;
+        max-width: 320px;
+        position: absolute;
+        left: calc(50% - 44px);
+        transform: translate(calc(-50% + 44px), 54px);
+        border-bottom: 2px solid #fa404d;
+    }
+
+    .text span {
+        display: block;
+        font-size: 16px;
+    }
+
+    .signUpForm {
+        align-items: center;
+        height: calc(100vh - 108px);
+        width: 100%;
+        position: relative;
+        top: initial;
+        left: initial;
+        transform: none;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .signUpForm::before {
+        display: none;
+    }
+
+    .signUpForm h2 {
+        margin-bottom: 24px;
+    }
+
+    .signUpForm .textField input {
+        margin-bottom: 8px;
+    }
+
+    .signUpForm button {
+        width: 80%;
+        max-width: 320px;
+        margin: 24px 0 16px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 54px;
+        width: calc(100% - 32px);
+        padding: 4px 16px;
+        background-color: #dcdbdb;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .text {
+        margin: 24px auto;
+    }
 }
